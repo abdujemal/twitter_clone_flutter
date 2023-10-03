@@ -20,47 +20,38 @@ class Pallete {
 
   // themes
   static var lightTheme = ThemeData.light().copyWith(
-    accentColor: textColor,
     scaffoldBackgroundColor: bgColor,
-    
     cardColor: greyColor,
     appBarTheme: const AppBarTheme(
-      // centerTitle: true,
-      backgroundColor: bgColor,
-      iconTheme: IconThemeData(
-        color: primaryColor,
-      ),
-      elevation: 0,
-      titleTextStyle: TextStyle(
-        color: Colors.black,
-        fontSize: 20
-      )
-    ),
+        // centerTitle: true,
+        backgroundColor: bgColor,
+        iconTheme: IconThemeData(
+          color: primaryColor,
+        ),
+        elevation: 0,
+        titleTextStyle: TextStyle(color: Colors.black, fontSize: 20)),
     drawerTheme: const DrawerThemeData(
       backgroundColor: bgColor,
     ),
-    
     floatingActionButtonTheme:
         const FloatingActionButtonThemeData(backgroundColor: primaryColor),
     primaryColor: primaryColor,
-    colorScheme: const ColorScheme.light(background: bgColor),
+    colorScheme: const ColorScheme.light(background: bgColor).copyWith(
+      secondary: textColor,
+    ),
   );
 
   static var darkTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: bgColor,
     cardColor: greyColor,
     appBarTheme: const AppBarTheme(
-      centerTitle: true,
-      backgroundColor: bgColor,
-      iconTheme: IconThemeData(
-        color: primaryColor,
-      ),
-      elevation: 0,
-      titleTextStyle: TextStyle(
-        color: primaryColor,
-        fontSize: 20
-      )
-    ),
+        centerTitle: true,
+        backgroundColor: bgColor,
+        iconTheme: IconThemeData(
+          color: primaryColor,
+        ),
+        elevation: 0,
+        titleTextStyle: TextStyle(color: primaryColor, fontSize: 20)),
     drawerTheme: const DrawerThemeData(
       backgroundColor: bgColor,
     ),
